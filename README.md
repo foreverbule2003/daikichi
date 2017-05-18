@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/5xRuby/daikichi.svg?branch=development)](https://travis-ci.org/5xRuby/daikichi) [![Code Climate](https://codeclimate.com/github/5xRuby/daikichi/badges/gpa.svg)](https://codeclimate.com/github/5xRuby/daikichi) [![Test Coverage](https://codeclimate.com/github/5xRuby/daikichi/badges/coverage.svg)](https://codeclimate.com/github/5xRuby/daikichi/coverage)
+# This project is fetch from https://github.com/5xRuby/daikichi
+
 # Requirements
 
 * Ruby 2.3.1
