@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.rc1', '< 5.1'
+gem 'rails', '>= 5.0.1', '< 5.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -47,6 +46,7 @@ gem 'settingslogic'
 gem 'simple_form'
 gem 'whenever', require: false
 gem 'working_hours'
+gem 'annotate'
 
 group :development, :test do
   gem 'awesome_print'
@@ -56,6 +56,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'timecop'
   gem 'rspec-rails'
+  gem 'awesome_rails_console'
 end
 
 group :development do

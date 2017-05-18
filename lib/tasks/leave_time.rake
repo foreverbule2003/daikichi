@@ -9,11 +9,31 @@ namespace :leave_time do
     skip_validate = (!args[:skip].nil? && args[:skip] == "force") ? true : false
     if skip_validate || beginning_of_year?
       year = args[:year].nil? ? Time.zone.today.year : args[:year].to_i
-      User.fulltime.each do |user|
-        LeaveTime::BASIC_TYPES.each do |leave_type|
-          leave_time = user.leave_times.build(year: year, leave_type: leave_type)
-          leave_time.init_quota
+        User.fulltime.each do |user|
+        LeaveTime.leave_types.values.each do |leave_type|
+          user.leave_times.create!(
+                                user_id: user.id,
+                                leave_type: leave_type,
+                                quota: 99,
+                                effective_date: Time.now,
+                                expiration_date: Time.now.end_of_month
+                                )
         end
+      end
+    end
+  end
+
+  desc "my epmloyee leave refill"
+  task my_refill: :environment do
+    User.fulltime.each do |user|
+      LeaveTime.leave_types.values.each do |leave_type|
+        user.leave_times.create!(
+                              user_id: user.id,
+                              leave_type: leave_type,
+                              quota: 99,
+                              effective_date: Time.now,
+                              expiration_date: Time.now.end_of_month
+                              )
       end
     end
   end

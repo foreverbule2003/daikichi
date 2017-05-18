@@ -1,3 +1,30 @@
+# == Schema Information
+#
+# Table name: leave_applications
+#
+#  id            :integer          not null, primary key
+#  user_id       :integer
+#  leave_type    :string
+#  hours         :integer          default("0")
+#  start_time    :datetime
+#  end_time      :datetime
+#  description   :text
+#  status        :string           default("pending")
+#  sign_date     :datetime
+#  deleted_at    :datetime
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  manager_id    :integer
+#  comment       :text
+#  uuid          :string           not null
+#  leave_time_id :integer
+#
+# Indexes
+#
+#  index_leave_applications_on_manager_id  (manager_id)
+#  index_leave_applications_on_uuid        (uuid) UNIQUE
+#
+
 # frozen_string_literal: true
 require 'rails_helper'
 RSpec.describe LeaveApplication, type: :model do

@@ -1,5 +1,62 @@
 ---
 zh-TW:
+  simple_form:
+    "yes": '是'
+    "no": '否'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    options:
+      leave_time:
+        leave_type:
+          absent: '曠職'
+          personal: '事假'
+          sick: '病假'
+          sick_unpaid: '病假(無薪)'
+          annual: '特休'
+          bonus: '補休'
+          official: '公假'
+          marriage: '婚假'
+          maternity: '產假'
+          bereavement: '喪假'
+          injury: '公傷假'
+          nunar_new_year: '農曆年假'
+          travel: '出差'
+          bridge: '彈性假'
+          typhoon_halfpaid: '颱風假(半薪)'
+          typhoon_unpaid: '颱風假(無薪)'
+          paternity: '陪產假'
+          prenatal: '產檢假'
+          menstrual: '生理假'
+
+      leave_application:
+        leave_type:
+          absent: '曠職'
+          personal: '事假'
+          sick: '病假'
+          sick_unpaid: '病假(無薪)'
+          annual: '特休'
+          bonus: '補休'
+          official: '公假'
+          marriage: '婚假'
+          maternity: '產假'
+          bereavement: '喪假'
+          injury: '公傷假'
+          nunar_new_year: '農曆年假'
+          travel: '出差'
+          bridge: '彈性假'
+          typhoon_halfpaid: '颱風假(半薪)'
+          typhoon_unpaid: '颱風假(無薪)'
+          paternity: '陪產假'
+          prenatal: '產檢假'
+          menstrual: '生理假'
+        status:
+          approved: '核准'
+          pending: '待審核'
+          canceled: '已取消'        
   date:
     abbr_day_names:
     - 周日

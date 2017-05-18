@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: leave_times
+#
+#  id              :integer          not null, primary key
+#  user_id         :integer          not null
+#  leave_type      :string
+#  quota           :integer
+#  usable_hours    :integer
+#  used_hours      :integer          default("0")
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  refilled        :boolean          default("false")
+#  effective_date  :date             not null
+#  expiration_date :date             not null
+#  remark          :text
+#  locked_hours    :integer
+#
+
 # frozen_string_literal: true
 FactoryGirl.define do
   factory :leave_time do

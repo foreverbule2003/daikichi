@@ -22,21 +22,26 @@ zh-TW:
         leave_date: "離職日期"
       leave_time:
         leave_types:
-          remote: '在家上班'
-          late: '遲到'
           absent: '曠職'
-          annual: '特休'
           personal: '事假'
-          fullpaid_sick: '全薪病假'
-          halfpaid_sick: '半薪病假'
-          bereavement: '喪假'
+          sick: '病假'
+          sick_unpaid: '病假(無薪)'
+          annual: '特休'
+          bonus: '補休'
           official: '公假'
           marriage: '婚假'
           maternity: '產假'
-          bonus: '補休'
-          compassionate: '喪假'
-          sick: '病假 (Deprecatred)'
-          unpaid: '無薪事假'
+          bereavement: '喪假'
+          injury: '公傷假'
+          nunar_new_year: '農曆年假'
+          travel: '出差'
+          bridge: '彈性假'
+          typhoon_halfpaid: '颱風假(半薪)'
+          typhoon_unpaid: '颱風假(無薪)'
+          paternity: '陪產假'
+          prenatal: '產檢假'
+          menstrual: '生理假'
+              
         user: "員工"
         name: "擁有者"
         leave_type: "假別"
@@ -57,14 +62,25 @@ zh-TW:
           canceled: '取消'
           all: '全部'
         leave_types:
-          annual: '特別休假'
-          bonus: '補充休假'
+          absent: '曠職'
+          personal: '事假'
           sick: '病假'
-          personal: '無薪事假'
-          remote: '遠端工作'
+          sick_unpaid: '病假(無薪)'
+          annual: '特休'
+          bonus: '補休'
           official: '公假'
           marriage: '婚假'
-          compassionate: '喪假'
+          maternity: '產假'
+          bereavement: '喪假'
+          injury: '公傷假'
+          nunar_new_year: '農曆年假'
+          travel: '出差'
+          bridge: '彈性假'
+          typhoon_halfpaid: '颱風假(半薪)'
+          typhoon_unpaid: '颱風假(無薪)'
+          paternity: '陪產假'
+          prenatal: '產檢假'
+          menstrual: '生理假'
         user: "員工"
         start_time: "開始時間"
         end_time: "結束時間"
@@ -206,5 +222,5 @@ zh-TW:
     leave_time_not_sufficient: "請假額度不足，無法申請假單："
 
   misc:
-    app_title: "五倍神社"
-    company_name: "五倍紅寶石"
+    app_title: "藍騰"
+    company_name: "墊腳石"

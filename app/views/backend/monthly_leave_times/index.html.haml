@@ -28,7 +28,7 @@
       - current_collection.each do |id, content|
         %tr
           %td.name= t_value :name, User.find_by(id: id)
-          - LeaveTime::BASIC_TYPES.each do |leave_type|
+          - LeaveTime.leave_types.each do |leave_type|
             %td.hours= content[leave_type]
 
 - else
