@@ -21,7 +21,6 @@
 
 /config/database.yml
 /config/secrets.yml
-/config/application.yml
 
 # Personal settings
 /.irbrc

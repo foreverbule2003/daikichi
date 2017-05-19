@@ -1,0 +1,182 @@
+defaults: &defaults
+  force_ssl: false
+  metadata:
+    title: ''
+
+  roles:
+    manager: 'manager'
+    hr: 'hr'
+    employee: 'employee'
+    contractor: 'contractor'
+    parttime: 'parttime'
+    intern: 'intern'
+    resigned: 'resigned'
+    pending: 'pending'
+
+  leave_applications:
+    statuses:
+      pending: pending
+      approved: approved
+      rejected: rejected
+      canceled: canceled
+    leave_types:
+      absent: absent
+      personal: personal
+      sick: sick
+      sick_unpaid: sick_unpaid
+      annual: annual
+      bonus: bonus
+      official: official
+      marriage: marriage
+      maternity: maternity
+      bereavement: bereavement
+      injury: injury
+      nunar_new_year: nunar_new_year
+      travel: travel
+      bridge: bridge
+      typhoon_halfpaid: typhoon_halfpaid
+      typhoon_unpaid: typhoon_unpaid
+      paternity: paternity
+      prenatal: prenatal
+      menstrual: menstrual
+      
+    available_quota_types:
+      absent: 
+        - absent
+      personal: 
+        - personal
+      sick: 
+        - sick
+      sick_unpaid: 
+        - sick_unpaid
+      annual: 
+        - annual
+      bonus: 
+        - bonus
+      official: 
+        - official
+      marriage: 
+        - marriage
+      maternity: 
+        - maternity
+      bereavement: 
+        - bereavement
+      injury: 
+        - injury
+      nunar_new_year: 
+        - nunar_new_year
+      travel: 
+        - travel
+      bridge: 
+        - bridge
+      typhoon_halfpaid: 
+        - typhoon_halfpaid
+      typhoon_unpaid: 
+        - typhoon_unpaid
+      paternity: 
+        - paternity
+      prenatal: 
+        - prenatal
+      menstrual: 
+        - menstrual
+     
+  leave_times:
+    quota_types:
+      absent: absent
+      personal: personal
+      sick: sick
+      sick_unpaid: sick_unpaid
+      annual: annual
+      bonus: bonus
+      official: official
+      marriage: marriage
+      maternity: maternity
+      bereavement: bereavement
+      injury: injury
+      nunar_new_year: nunar_new_year
+      travel: travel
+      bridge: bridge
+      typhoon_halfpaid: typhoon_halfpaid
+      typhoon_unpaid: typhoon_unpaid
+      paternity: paternity
+      prenatal: prenatal
+      menstrual: menstrual
+
+  leed_days:
+    monthly: 5 # working.days
+    join_date_based: 40 # days
+
+  leave_types:
+    absent: 
+      creation: monthly
+      quota: 31 # days
+    personal:
+      creation: monthly
+      quota: 31 # days      
+    sick: 
+      creation: monthly
+      quota: 31 # days
+    sick_unpaid: 
+      creation: monthly
+      quota: 31 # days
+    annual: 
+      creation: monthly
+      quota: 31 # days    
+    bonus: 
+      creation: monthly
+      quota: 31 # days 
+    official: 
+      creation: monthly
+      quota: 31 # days 
+    marriage: 
+      creation: monthly
+      quota: 31 # days 
+    maternity: 
+      creation: monthly
+      quota: 31 # days 
+    bereavement: 
+      creation: monthly
+      quota: 31 # days 
+    injury: 
+      creation: monthly
+      quota: 31 # days 
+    nunar_new_year: 
+      creation: monthly
+      quota: 31 # days 
+    travel: 
+      creation: monthly
+      quota: 31 # days 
+    bridge: 
+      creation: monthly
+      quota: 31 # days 
+    typhoon_halfpaid: 
+      creation: monthly
+      quota: 31 # days   
+    typhoon_unpaid: 
+      creation: monthly
+      quota: 31 # days
+    paternity: 
+      creation: monthly
+      quota: 31 # days
+    prenatal: 
+      creation: monthly
+      quota: 31 # days
+    menstrual: 
+      creation: monthly
+      quota: 31 # days        
+
+  backend:
+    default_leave_pool_type: bonus
+
+  misc:
+    starting_year: 2016
+
+development:
+  <<: *defaults
+  neat_setting: 800
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
